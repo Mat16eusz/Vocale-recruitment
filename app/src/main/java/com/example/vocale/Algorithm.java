@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 
 public class Algorithm {
 
-    private List<Integer> numbersList;
+    private final List<Integer> numbersList;
     private int unique;
 
     /**
@@ -28,7 +28,7 @@ public class Algorithm {
 
     /**
      * A method that returns a number from the int list that is distinct from the rest. For example:
-     * 2,4,0,100,4,11,2602.36 will return 11 and 160,3,1719,19,11,13, -21 will return 160.
+     * 2,4,0,100,4,11,2602,36 will return 11 and 160,3,1719,19,11,13,-21 will return 160.
      *
      * @param numbersList: a list with integers.
      * @return int: a number different from the rest of the numbers in the list.

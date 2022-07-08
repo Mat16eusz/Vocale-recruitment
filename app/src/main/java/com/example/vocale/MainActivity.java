@@ -9,21 +9,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements StartFragment.StartFragmentListener {
 
-    private StartFragment startFragment;
-    private ResultFragment resultFragment;
-    private int uniqueNumber;
+    private Integer uniqueNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        startFragment = new StartFragment();
-        resultFragment = new ResultFragment();
-
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.container_start, startFragment)
-                .commit();
     }
 
     /**
@@ -37,12 +28,8 @@ public class MainActivity extends AppCompatActivity implements StartFragment.Sta
         try {
             Algorithm algorithm = new Algorithm(charSequence);
             uniqueNumber = algorithm.getUnique();
-
-            getSupportFragmentManager().beginTransaction()
-                    .detach(startFragment)
-                    .replace(R.id.container_result, resultFragment)
-                    .commit();
         } catch (Exception e) {
+            uniqueNumber = null;
             Toast.makeText(this, R.string.few_numbers, Toast.LENGTH_SHORT).show();
         }
     }
@@ -52,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements StartFragment.Sta
      *
      * @return int: a different number.
      */
-    public int getUniqueNumber() {
+    public Integer getUniqueNumber() {
         return uniqueNumber;
     }
 }
