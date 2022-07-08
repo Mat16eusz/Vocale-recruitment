@@ -3,4 +3,5 @@
     <string name="app_name">Vocale</string>
     <string name="enter_the_numbers">Wprowadź liczby</string>
     <string name="search">Wyszukaj</string>
+    <string name="few_numbers">Podałeś za mało liczb!</string>
 </resources>

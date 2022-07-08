@@ -32,19 +32,12 @@ public class StartFragment extends Fragment {
 
         enterNumbers = view.findViewById(R.id.enterNumbers);
         searchByNumber = view.findViewById(R.id.searchByNumber);
-        searchByNumber.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CharSequence charSequence = enterNumbers.getText();
-                listener.onInputNumbersSent(charSequence);
-            }
+        searchByNumber.setOnClickListener(view1 -> {
+            CharSequence charSequence = enterNumbers.getText();
+            listener.onInputNumbersSent(charSequence);
         });
 
         return view;
-    }
-
-    public void updateEnterNumbers(CharSequence newText) {
-        enterNumbers.setText(newText);
     }
 
     @Override
