@@ -34,58 +34,19 @@ public class Algorithm {
      * @return int: a number different from the rest of the numbers in the list.
      */
     private int uniqueNumber(List<Integer> numbersList) {
-        boolean even = false;
-
         if (numbersList.size() < 3) {
             throw new ArrayStoreException("You have entered too few items!");
         }
 
-        if (numbersList.get(0) % 2 == 0 && numbersList.get(1) % 2 == 0) {
-            even = true;
-        } else if (numbersList.get(0) % 2 != 0 && numbersList.get(1) % 2 != 0) {
-            even = false;
-        } else {
-            if (numbersList.get(0) % 2 == 0 && numbersList.get(1) % 2 == 0) {
-                even = true;
-            }
-            if (even) {
-                unique = numbersList.get(2);
-
-                return unique;
-            } else {
-                if (numbersList.get(0) % 2 == 0 && numbersList.get(2) % 2 == 0) {
-                    even = true;
-                }
-                if (even) {
-                    unique = numbersList.get(1);
-
-                    return unique;
-                } else {
-                    if (numbersList.get(1) % 2 == 0 && numbersList.get(2) % 2 == 0) {
-                        even = true;
-                    }
-                    if (even) {
-                        unique = numbersList.get(0);
-
-                        return unique;
-                    }
-                }
-            }
-        }
+        int even = (numbersList.get(0) | numbersList.get(1)) &
+               (numbersList.get(0) | numbersList.get(2)) &
+               (numbersList.get(1) | numbersList.get(2)) & 1;
 
         for (Integer number : numbersList) {
-            if (even) {
-                if (number % 2 != 0) {
-                    unique = number;
+            if ((number & 1) != even) {
+                unique = number;
 
-                    break;
-                }
-            } else {
-                if (number % 2 == 0) {
-                    unique = number;
-
-                    break;
-                }
+                break;
             }
         }
 
