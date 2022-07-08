@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Vocale</string>
+    <string name="enter_the_numbers">Wprowadź liczby</string>
+    <string name="search">Wyszukaj</string>
+</resources>

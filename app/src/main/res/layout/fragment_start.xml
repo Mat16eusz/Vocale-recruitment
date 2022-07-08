@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTheme"
+    android:orientation="vertical"
+    tools:context=".StartFragment">
+
+
+    <EditText
+        android:id="@+id/enterNumbers"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:textSize="18sp"
+        android:layout_margin="32dp"
+        android:background="@null"
+        android:textColor="@color/white"
+        android:hint="@string/enter_the_numbers"
+        android:textColorHint="@color/textColorHintLight"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/searchByNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/rounded_corner"
+        android:text="@string/search"
+        android:textColor="@color/white" />
+
+</FrameLayout>
