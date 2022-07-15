@@ -1,10 +1,12 @@
 package com.example.vocale;
 
+import androidx.annotation.NonNull;
+
 import java.util.List;
 
 public class Algorithm {
 
-    public int uniqueNumber(List<Integer> numbersList) {
+    public int uniqueNumber(@NonNull List<Integer> numbersList) {
         int unique = 0;
 
         int even = (numbersList.get(0) | numbersList.get(1)) &
