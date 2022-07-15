@@ -1,9 +1,5 @@
 package com.example.vocale;
 
-import android.os.Build;
-
-import androidx.annotation.RequiresApi;
-
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,7 +9,6 @@ public class Algorithm {
     private final List<Integer> numbersList;
     private int unique;
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     public Algorithm(CharSequence charSequence) {
         String numbers = charSequence.toString();
         numbersList = Arrays.asList(numbers.split(",")).stream().map(s -> Integer.parseInt(s.trim())).collect(Collectors.toList());

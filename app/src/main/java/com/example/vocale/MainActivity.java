@@ -1,9 +1,7 @@
 package com.example.vocale;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Build;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -17,7 +15,6 @@ public class MainActivity extends AppCompatActivity implements StartFragment.Sta
         setContentView(R.layout.activity_main);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onInputNumbersSent(CharSequence charSequence) {
         try {
