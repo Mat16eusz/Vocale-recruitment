@@ -17,11 +17,6 @@ public class MainActivity extends AppCompatActivity implements StartFragment.Sta
         setContentView(R.layout.activity_main);
     }
 
-    /**
-     * A method that runs the algorithm for finding a unique number from an array and displays it.
-     *
-     * @param charSequence: string with numbers separated by ",".
-     */
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onInputNumbersSent(CharSequence charSequence) {
@@ -34,11 +29,6 @@ public class MainActivity extends AppCompatActivity implements StartFragment.Sta
         }
     }
 
-    /**
-     * Returns a different number.
-     *
-     * @return int: a different number.
-     */
     public Integer getUniqueNumber() {
         return uniqueNumber;
     }

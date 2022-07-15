@@ -15,9 +15,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class StartFragment extends Fragment {
 
     private StartFragmentListener listener;

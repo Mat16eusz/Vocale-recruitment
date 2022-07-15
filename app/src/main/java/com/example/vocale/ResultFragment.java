@@ -10,9 +10,6 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ResultFragment extends Fragment {
 
     @SuppressLint("SetTextI18n")

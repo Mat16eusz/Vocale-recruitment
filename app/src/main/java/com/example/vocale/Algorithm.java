@@ -13,11 +13,6 @@ public class Algorithm {
     private final List<Integer> numbersList;
     private int unique;
 
-    /**
-     * The constructor converts a string of characters separated by commas into a list of integers.
-     *
-     * @param charSequence: string with numbers separated by ",".
-     */
     @RequiresApi(api = Build.VERSION_CODES.N)
     public Algorithm(CharSequence charSequence) {
         String numbers = charSequence.toString();
@@ -26,13 +21,6 @@ public class Algorithm {
         uniqueNumber(numbersList);
     }
 
-    /**
-     * A method that returns a number from the int list that is distinct from the rest. For example:
-     * 2,4,0,100,4,11,2602,36 will return 11 and 160,3,1719,19,11,13,-21 will return 160.
-     *
-     * @param numbersList: a list with integers.
-     * @return int: a number different from the rest of the numbers in the list.
-     */
     private int uniqueNumber(List<Integer> numbersList) {
         if (numbersList.size() < 3) {
             throw new ArrayStoreException("You have entered too few items!");
@@ -53,11 +41,6 @@ public class Algorithm {
         return unique;
     }
 
-    /**
-     * Returns a different number.
-     *
-     * @return int: a different number.
-     */
     public int getUnique() {
         return unique;
     }
