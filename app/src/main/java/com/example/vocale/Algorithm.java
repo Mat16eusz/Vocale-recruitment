@@ -1,25 +1,11 @@
 package com.example.vocale;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class Algorithm {
 
-    private final List<Integer> numbersList;
-    private int unique;
-
-    public Algorithm(CharSequence charSequence) {
-        String numbers = charSequence.toString();
-        numbersList = Arrays.asList(numbers.split(",")).stream().map(s -> Integer.parseInt(s.trim())).collect(Collectors.toList());
-
-        uniqueNumber(numbersList);
-    }
-
-    private int uniqueNumber(List<Integer> numbersList) {
-        if (numbersList.size() < 3) {
-            throw new ArrayStoreException("You have entered too few items!");
-        }
+    public int uniqueNumber(List<Integer> numbersList) {
+        int unique = 0;
 
         int even = (numbersList.get(0) | numbersList.get(1)) &
                (numbersList.get(0) | numbersList.get(2)) &
@@ -33,10 +19,6 @@ public class Algorithm {
             }
         }
 
-        return unique;
-    }
-
-    public int getUnique() {
         return unique;
     }
 }

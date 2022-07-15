@@ -18,8 +18,9 @@ public class MainActivity extends AppCompatActivity implements StartFragment.Sta
     @Override
     public void onInputNumbersSent(CharSequence charSequence) {
         try {
-            Algorithm algorithm = new Algorithm(charSequence);
-            uniqueNumber = algorithm.getUnique();
+            DataValidation dataValidation = new DataValidation(charSequence);
+            Algorithm algorithm = new Algorithm();
+            uniqueNumber = algorithm.uniqueNumber(dataValidation.getNumbersList());
         } catch (Exception e) {
             uniqueNumber = null;
             Toast.makeText(this, R.string.few_numbers, Toast.LENGTH_SHORT).show();
